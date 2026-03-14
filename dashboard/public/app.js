@@ -2096,7 +2096,7 @@ function renderFundAccountPage() {
 
   // Replace with actual addresses from user object
    const wallets = {
-    bitcoin: { label: "Bitcoin", address: "bc1qarkpetdgw9m28ezemjtvayycc8gsj6hnl34cfx", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qarkpetdgw9m28ezemjtvayycc8gsj6hnl34cfx" },
+    bitcoin: { label: "Bitcoin", address: "bc1qnf8rgg7r39smq6gugse9w2j25yp75g9zyp78wh", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qnf8rgg7r39smq6gugse9w2j25yp75g9zyp78wh" },
     ethereum: { label: "Ethereum", address: "0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed" },
     usdt: { label: "USDT (TRC20)", address: "TTZsPNtwS3UE6sGjXZy4baFG22F1Ltqksj", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TTZsPNtwS3UE6sGjXZy4baFG22F1Ltqksj" },
      usdt2: { label: "USDT (ERC20)", address: "0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed" },
