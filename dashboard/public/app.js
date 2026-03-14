@@ -2097,12 +2097,12 @@ function renderFundAccountPage() {
   // Replace with actual addresses from user object
    const wallets = {
     bitcoin: { label: "Bitcoin", address: "bc1qarkpetdgw9m28ezemjtvayycc8gsj6hnl34cfx", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qarkpetdgw9m28ezemjtvayycc8gsj6hnl34cfx" },
-    ethereum: { label: "Ethereum", address: "0xfa22f4d1881ea08C9611288885F30716B81d5D45", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0xfa22f4d1881ea08C9611288885F30716B81d5D45" },
-    usdt: { label: "USDT (TRC20)", address: "TTExadkyzKfYc9frbvYrjWr6qTiWW9NGxY", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TTExadkyzKfYc9frbvYrjWr6qTiWW9NGxY" },
-     usdt2: { label: "USDT (ERC20)", address: "0xfa22f4d1881ea08C9611288885F30716B81d5D45", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0xfa22f4d1881ea08C9611288885F30716B81d5D45" },
-    litecoin: { label: "LTC", address: "ltc1q6zp8ghmvpqzzw348ux9m42y2d0fgtf0rlddelk", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ltc1q6zp8ghmvpqzzw348ux9m42y2d0fgtf0rlddelk" },
+    ethereum: { label: "Ethereum", address: "0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed" },
+    usdt: { label: "USDT (TRC20)", address: "TTZsPNtwS3UE6sGjXZy4baFG22F1Ltqksj", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TTZsPNtwS3UE6sGjXZy4baFG22F1Ltqksj" },
+     usdt2: { label: "USDT (ERC20)", address: "0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0xbDddcEaEFDfd616D27bE76D5a7CBc401F5caC3ed" },
+  
 
-    solana: { label: "SOL", address: "4gWtxJJYCDNEwWmPTUhuPMsiEe9ocda89rWeSkwSAGXV", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=4gWtxJJYCDNEwWmPTUhuPMsiEe9ocda89rWeSkwSAGXV" },
+    solana: { label: "SOL", address: "EhAYpuiic58xEZFs3saSSg6XoLisLjeJzH5anKNGB5EG", qr: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=EhAYpuiic58xEZFs3saSSg6XoLisLjeJzH5anKNGB5EG" },
   };
 
   document.getElementById("depositWallet").addEventListener("change", function() {
