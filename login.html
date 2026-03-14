@@ -96,6 +96,8 @@ async function submitLogin(){
    if (email=="adminrole@gmail.com"){
               $(location).prop('href', './dashboard/admin/test.html')
             } else {
+
+                localStorage.setItem("userData",JSON.stringify(data.data))
               $(location).prop('href','./dashboard/public/index.html')
             }
 }, 2000);
