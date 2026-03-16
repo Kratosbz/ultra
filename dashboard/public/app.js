@@ -64,60 +64,71 @@ function getInvestmentPlans() {
   if (!plans) {
     const defaultPlans = [
       {
-  id: 'basic',
-  name: 'Basic Plan',
-  minInvestment: 1000,
-  maxInvestment: 3999,
-  dailyProfitRate: 0.004, // 0.4% daily
-  duration: 1,
-  durationn: 24,
-  description: 'Perfect for beginners looking to start their investment journey',
-  color: 'hsl(30, 60%, 50%)'
-},
-{
-  id: 'silver',
-  name: 'Silver Plan',
-  minInvestment: 4000,
-  maxInvestment: 9999,
-  dailyProfitRate: 0.005, // 0.5% daily
-  duration: 1,
-  durationn: 24,
-  description: 'Balanced plan for steady growth and reliable returns',
-  color: 'hsl(0, 0%, 70%)'
-},
-{
-  id: 'gold',
-  name: 'Gold Plan',
-  minInvestment: 10000,
-  maxInvestment: 49999,
-  dailyProfitRate: 0.006, // 0.6% daily
-  duration: 2,
-  durationn: 48,
-  description: 'Premium plan with high returns for serious investors',
-  color: 'hsl(45, 100%, 50%)'
-},
-{
-  id: 'diamond',
-  name: 'Diamond Plan',
-  minInvestment: 50000,
-  maxInvestment: 99999,
-  dailyProfitRate: 0.007, // 0.7% daily
-  duration: 3,
-  durationn: 72,
-  description: 'Elite plan for maximum profit and exclusive benefits',
-  color: 'hsl(195, 70%, 60%)'
-},
-{
-  id: 'ultimate',
-  name: 'Ultimate Plan',
-  minInvestment: 100000,
-  maxInvestment: null, // Unlimited
-  dailyProfitRate: 0.009, // 0.8% - 1% daily (midpoint ~0.9%)
-  duration: 4,
-  durationn: 96,
-  description: 'Elite plan for maximum profit and exclusive benefits',
-  color: 'hsl(270, 70%, 60%)'
-}
+        id: 'basic',
+        name: 'Basic Package',
+        minInvestment: 1000,
+        maxInvestment: 3999,
+        dailyProfitRate: 0.004, // 2% daily
+        duration: 30, // days
+        durationn: 24, // days
+        description: 'Perfect for beginners looking to start their investment journey',
+        color: 'hsl(30, 60%, 50%)'
+      },
+      {
+        id: 'silver',
+        name: 'Silver Plan',
+        minInvestment: 4000,
+        maxInvestment: 9999,
+        dailyProfitRate: 0.005, // 3.5% daily
+        duration: 30,
+         durationn: 720, // days
+        description: 'Balanced plan for steady growth and reliable returns',
+        color: 'hsl(0, 0%, 70%)'
+      },
+      {
+        id: 'gold',
+        name: 'Gold Plan',
+        minInvestment: 10000,
+        maxInvestment: 49999,
+        dailyProfitRate: 0.006, // 5% daily
+        duration: 30,
+         durationn: 720, // days
+        description: 'Premium plan with high returns for serious investors',
+        color: 'hsl(45, 100%, 50%)'
+      },
+      {
+        id: 'diamond',
+        name: 'Diamond Plan',
+        minInvestment: 50000,
+        maxInvestment: 99999,
+        dailyProfitRate: 0.0070, // 7.5% daily
+        duration: 30,
+         durationn: 720, // days
+        description: 'Elite plan for maximum profit and exclusive benefits',
+        color: 'hsl(195, 70%, 60%)'
+      },
+       {
+        id: 'ultimate',
+        name: 'Ultimate Plan',
+        minInvestment: 100000,
+        maxInvestment: 1000000,
+        dailyProfitRate: 0.01, // 7.5% daily
+        duration: 4,
+         durationn: 96, // days
+        description: 'Elite plan for maximum profit and exclusive benefits',
+        color: 'hsl(195, 70%, 60%)'
+      },
+      //  {
+      //   id: 'master',
+      //   name: 'Master Plan',
+      //   minInvestment: 50000,
+      //   maxInvestment: 100000,
+      //   dailyProfitRate: 0.064, // 7.5% daily
+      //   duration: 7,
+      //    durationn: 120, // days
+      //   description: 'Elite plan for maximum profit and exclusive benefits',
+      //   color: 'hsl(195, 70%, 60%)'
+      // }
       
     ];
 
@@ -1490,7 +1501,7 @@ function renderAdminPage() {
           <strong>${plan.name}</strong>
         </div>
       </td>
-      <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">$${plan.minInvestment} - $${plan.maxInvestment}</td>
+      <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">$${plan.minInvestment} - $${plan.maxInvestment.toLocaleString()}</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">${(plan.dailyProfitRate * 100).toFixed(2)}%</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">${plan.durationn} hours</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">
@@ -2730,7 +2741,7 @@ function renderInvestmentPlansPage() {
           </div>
           <div>
             <div class="text-muted small">Max Investment</div>
-            <div style="font-weight: 600; margin-top: 0.25rem;">$${plan.maxInvestment}</div>
+            <div style="font-weight: 600; margin-top: 0.25rem;">$${plan.maxInvestment.toLocaleString()}</div>
           </div>
           <div>
             <div class="text-muted small">Daily Profit</div>
