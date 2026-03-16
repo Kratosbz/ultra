@@ -64,71 +64,60 @@ function getInvestmentPlans() {
   if (!plans) {
     const defaultPlans = [
       {
-        id: 'basic',
-        name: 'Basic Package',
-        minInvestment: 57,
-        maxInvestment: 3900,
-        dailyProfitRate: 0.05, // 2% daily
-        duration: 1, // days
-        durationn: 24, // days
-        description: 'Perfect for beginners looking to start their investment journey',
-        color: 'hsl(30, 60%, 50%)'
-      },
-      {
-        id: 'silver',
-        name: 'Silver Plan',
-        minInvestment: 4000,
-        maxInvestment: 9850,
-        dailyProfitRate: 0.10, // 3.5% daily
-        duration: 1,
-         durationn: 24, // days
-        description: 'Balanced plan for steady growth and reliable returns',
-        color: 'hsl(0, 0%, 70%)'
-      },
-      {
-        id: 'gold',
-        name: 'Gold Plan',
-        minInvestment: 15000,
-        maxInvestment: 26000,
-        dailyProfitRate: 0.075, // 5% daily
-        duration: 2,
-         durationn: 48, // days
-        description: 'Premium plan with high returns for serious investors',
-        color: 'hsl(45, 100%, 50%)'
-      },
-      {
-        id: 'diamond',
-        name: 'Diamond Plan',
-        minInvestment: 20000,
-        maxInvestment: 31000,
-        dailyProfitRate: 0.083, // 7.5% daily
-        duration: 3,
-         durationn: 72, // days
-        description: 'Elite plan for maximum profit and exclusive benefits',
-        color: 'hsl(195, 70%, 60%)'
-      },
-       {
-        id: 'ultimate',
-        name: 'Ultimate Plan',
-        minInvestment: 20000,
-        maxInvestment: 52000,
-        dailyProfitRate: 0.087, // 7.5% daily
-        duration: 4,
-         durationn: 96, // days
-        description: 'Elite plan for maximum profit and exclusive benefits',
-        color: 'hsl(195, 70%, 60%)'
-      },
-       {
-        id: 'master',
-        name: 'Master Plan',
-        minInvestment: 50000,
-        maxInvestment: 100000,
-        dailyProfitRate: 0.064, // 7.5% daily
-        duration: 7,
-         durationn: 120, // days
-        description: 'Elite plan for maximum profit and exclusive benefits',
-        color: 'hsl(195, 70%, 60%)'
-      }
+  id: 'basic',
+  name: 'Basic Plan',
+  minInvestment: 1000,
+  maxInvestment: 3999,
+  dailyProfitRate: 0.004, // 0.4% daily
+  duration: 1,
+  durationn: 24,
+  description: 'Perfect for beginners looking to start their investment journey',
+  color: 'hsl(30, 60%, 50%)'
+},
+{
+  id: 'silver',
+  name: 'Silver Plan',
+  minInvestment: 4000,
+  maxInvestment: 9999,
+  dailyProfitRate: 0.005, // 0.5% daily
+  duration: 1,
+  durationn: 24,
+  description: 'Balanced plan for steady growth and reliable returns',
+  color: 'hsl(0, 0%, 70%)'
+},
+{
+  id: 'gold',
+  name: 'Gold Plan',
+  minInvestment: 10000,
+  maxInvestment: 49999,
+  dailyProfitRate: 0.006, // 0.6% daily
+  duration: 2,
+  durationn: 48,
+  description: 'Premium plan with high returns for serious investors',
+  color: 'hsl(45, 100%, 50%)'
+},
+{
+  id: 'diamond',
+  name: 'Diamond Plan',
+  minInvestment: 50000,
+  maxInvestment: 99999,
+  dailyProfitRate: 0.007, // 0.7% daily
+  duration: 3,
+  durationn: 72,
+  description: 'Elite plan for maximum profit and exclusive benefits',
+  color: 'hsl(195, 70%, 60%)'
+},
+{
+  id: 'ultimate',
+  name: 'Ultimate Plan',
+  minInvestment: 100000,
+  maxInvestment: null, // Unlimited
+  dailyProfitRate: 0.009, // 0.8% - 1% daily (midpoint ~0.9%)
+  duration: 4,
+  durationn: 96,
+  description: 'Elite plan for maximum profit and exclusive benefits',
+  color: 'hsl(270, 70%, 60%)'
+}
       
     ];
 
