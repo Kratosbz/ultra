@@ -1,8 +1,8 @@
-# ultraplustrading - Copy Trading & Investment Platform
+# Ultraplustrading - Copy Trading & Investment Platform
 
 ## Overview
 
-ultraplustrading is a copy trading and investment platform that enables users to trade forex, CFD, crypto, stocks, futures, and options. The platform features social trading capabilities where users can follow and mirror trades from master traders. Built with a modern TypeScript stack, it provides real-time market data visualization, account management, and automated copy trading functionality.
+Ultraplustrading is a copy trading and investment platform that enables users to trade forex, CFD, crypto, stocks, futures, and options. The platform features social trading capabilities where users can follow and mirror trades from master traders. Built with a modern TypeScript stack, it provides real-time market data visualization, account management, and automated copy trading functionality.
 
 ## User Preferences
 
