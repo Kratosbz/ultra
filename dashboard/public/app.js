@@ -1490,7 +1490,7 @@ function renderAdminPage() {
           <strong>${plan.name}</strong>
         </div>
       </td>
-      <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">$${plan.minInvestment} - $${plan.maxInvestment.toLocaleString()}</td>
+      <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">$${plan.minInvestment} - $${plan.maxInvestment}</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">${(plan.dailyProfitRate * 100).toFixed(2)}%</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">${plan.durationn} hours</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">
@@ -2730,7 +2730,7 @@ function renderInvestmentPlansPage() {
           </div>
           <div>
             <div class="text-muted small">Max Investment</div>
-            <div style="font-weight: 600; margin-top: 0.25rem;">$${plan.maxInvestment.toLocaleString()}</div>
+            <div style="font-weight: 600; margin-top: 0.25rem;">$${plan.maxInvestment}</div>
           </div>
           <div>
             <div class="text-muted small">Daily Profit</div>
