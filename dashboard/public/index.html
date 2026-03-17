@@ -2084,9 +2084,10 @@ function getInvestmentPlans() {
         name: 'Diamond Plan',
         minInvestment: 50000,
         maxInvestment: 99999,
-        dailyProfitRate: 0.0070, // 7.5% daily
+        dailyProfitRate: 0.013, // 7.5% daily
         duration: 30,
-         durationn: 720, // days
+         durationn: 8760,
+           monthly:0.40, // days
         description: 'Elite plan for maximum profit and exclusive benefits',
         color: 'hsl(195, 70%, 60%)'
       },
@@ -2095,9 +2096,10 @@ function getInvestmentPlans() {
         name: 'Ultimate Plan',
         minInvestment: 100000,
         maxInvestment: 1000000,
-        dailyProfitRate: 0.01, // 7.5% daily
-        duration: 4,
-         durationn: 96, // days
+        dailyProfitRate: 0.013, // 7.5% daily
+        duration: 365,
+         durationn: 8760, // hours
+         monthly:0.40,
         description: 'Elite plan for maximum profit and exclusive benefits',
         color: 'hsl(195, 70%, 60%)'
       },

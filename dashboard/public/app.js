@@ -63,7 +63,7 @@ function getInvestmentPlans() {
   const plans = localStorage.getItem('investmentPlans');
   if (!plans) {
     const defaultPlans = [
-      {
+     {
         id: 'basic',
         name: 'Basic Package',
         minInvestment: 1000,
@@ -92,6 +92,7 @@ function getInvestmentPlans() {
         maxInvestment: 49999,
         dailyProfitRate: 0.006, // 5% daily
         duration: 30,
+        monthly:0.40,
          durationn: 720, // days
         description: 'Premium plan with high returns for serious investors',
         color: 'hsl(45, 100%, 50%)'
@@ -101,9 +102,10 @@ function getInvestmentPlans() {
         name: 'Diamond Plan',
         minInvestment: 50000,
         maxInvestment: 99999,
-        dailyProfitRate: 0.0070, // 7.5% daily
-        duration: 30,
-         durationn: 720, // days
+        dailyProfitRate: 0.013, // 7.5% daily
+        duration: 365,
+         durationn: 8760,
+           monthly:0.40, // days
         description: 'Elite plan for maximum profit and exclusive benefits',
         color: 'hsl(195, 70%, 60%)'
       },
@@ -112,9 +114,10 @@ function getInvestmentPlans() {
         name: 'Ultimate Plan',
         minInvestment: 100000,
         maxInvestment: 1000000,
-        dailyProfitRate: 0.01, // 7.5% daily
-        duration: 4,
-         durationn: 96, // days
+        dailyProfitRate: 0.013, // 7.5% daily
+        duration: 365,
+         durationn: 8760, // hours
+         monthly:0.40,
         description: 'Elite plan for maximum profit and exclusive benefits',
         color: 'hsl(195, 70%, 60%)'
       },
@@ -1503,6 +1506,7 @@ function renderAdminPage() {
       </td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">$${plan.minInvestment} - $${plan.maxInvestment.toLocaleString()}</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">${(plan.dailyProfitRate * 100).toFixed(2)}%</td>
+       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">${(plan.monthly * 100).toFixed(2)}%</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">${plan.durationn} hours</td>
       <td style="padding: 0.75rem; border-bottom: 1px solid hsl(var(--border));">
         <button class="btn" style="background-color: hsl(var(--destructive)); color: hsl(var(--destructive-foreground)); padding: 0.25rem 0.75rem; font-size: 0.875rem;" onclick="handleDeletePlan('${plan.id}')">Delete</button>
@@ -2747,14 +2751,25 @@ function renderInvestmentPlansPage() {
             <div class="text-muted small">Daily Profit</div>
             <div style="font-weight: 600; color: hsl(var(--chart-2)); margin-top: 0.25rem;">${(plan.dailyProfitRate * 100).toFixed(2)}%</div>
           </div>
+
+         <div>
+  <div class="text-muted small">Monthly Profit</div>
+  <div style="font-weight: 600; color: hsl(var(--chart-2)); margin-top: 0.25rem;">
+    ${((plan.monthly ?? totalReturn)).toFixed(2)}%
+  </div>
+</div>
           <div>
             <div class="text-muted small">Total Return</div>
             <div style="font-weight: 600; color: hsl(var(--chart-2)); margin-top: 0.25rem;">${totalReturn.toFixed(0)}%</div>
           </div>
-          <div>
-            <div class="text-muted small">Duration</div>
-            <div style="font-weight: 600; margin-top: 0.25rem;">${plan.durationn} Hours</div>
-          </div>
+         <div>
+  <div class="text-muted small">Duration</div>
+  <div style="font-weight: 600; margin-top: 0.25rem;">
+    ${plan.durationn >= 8760 
+      ? (plan.durationn / 8760).toFixed(2) + ' Year(s)' 
+      : plan.durationn + ' Hour(s)'}
+  </div>
+</div>
           <div>
             <div class="text-muted small">Your Balance</div>
             <div style="font-weight: 600; margin-top: 0.25rem;">$${user.balance.toFixed(2)}</div>
