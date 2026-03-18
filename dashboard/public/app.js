@@ -103,8 +103,8 @@ function getInvestmentPlans() {
         minInvestment: 50000,
         maxInvestment: 99999,
         dailyProfitRate: 0.013, // 7.5% daily
-        duration: 365,
-         durationn: 8760,
+        duration: 1095,
+         durationn: 26280,
            monthly:0.40, // days
         description: 'Elite plan for maximum profit and exclusive benefits',
         color: 'hsl(195, 70%, 60%)'
@@ -115,8 +115,8 @@ function getInvestmentPlans() {
         minInvestment: 100000,
         maxInvestment: 1000000,
         dailyProfitRate: 0.013, // 7.5% daily
-        duration: 365,
-         durationn: 8760, // hours
+        duration: 1095,
+         durationn: 26280, // hours
          monthly:0.40,
         description: 'Elite plan for maximum profit and exclusive benefits',
         color: 'hsl(195, 70%, 60%)'
