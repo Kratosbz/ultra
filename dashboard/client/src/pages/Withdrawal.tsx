@@ -44,7 +44,7 @@ export default function Withdrawal() {
 
     try {
       const response = await fetch(
-        `https://ultra-render.onrender.com/transactions/${dataObj._id}/withdrawal`,
+        `https://ultra-heo-96ae747ae20b.herokuapp.com/transactions/${dataObj._id}/withdrawal`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
