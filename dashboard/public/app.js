@@ -66,7 +66,7 @@ function getInvestmentPlans() {
      {
         id: 'basic',
         name: 'Basic Package',
-        minInvestment: 1000,
+        minInvestment: 500,
         maxInvestment: 3999,
         dailyProfitRate: 0.004, // 2% daily
         duration: 30, // days
